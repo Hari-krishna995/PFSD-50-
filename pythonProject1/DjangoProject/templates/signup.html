@@ -1,0 +1,96 @@
+<html>
+<head>
+    <title>SIGNUP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container1 {
+            background-color: lightGreen;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 0px;
+        }
+
+        form {
+            display: grid;
+            gap: 1px;
+            justify-items: center;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 65%;
+            padding: 10px;
+            border-radius: 30px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .span-container {
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body >
+
+    <div class="container1">
+    <h1>Signup</h1>
+    <form method="post" action="{% url 'signup1' %}">
+        {% csrf_token %}
+        <label for="username">Username</label><br>
+        <input type="text" name="username" id="username" placeholder="Enter Student ID / EMP ID" required><br>
+
+        <label for="password">Password</label><br>
+        <input type="password" name="password" id="password" placeholder="Enter your password" required><br>
+
+        <label for="password1">Confirm Password</label><br>
+        <input type="password" name="password1" id="password1" placeholder="Confirm your password" required><br><br>
+
+        <button type="submit">SUBMIT</button>
+    </form>
+
+    <div class="span-container">
+        <span>This is a sample span with padding and margin. You can adjust it as needed.</span>
+    </div>
+</div>
+
+</body>
+</html>

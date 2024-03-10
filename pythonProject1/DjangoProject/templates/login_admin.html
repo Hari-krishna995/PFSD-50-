@@ -1,0 +1,66 @@
+
+{% extends 'new.html' %}
+<html>
+<head>
+    <title>LOGIN_admin</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: grid;
+            height: 100vh;
+            place-items: center;
+        }
+        .login-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .bodycontainer {
+            grid-column: 1 / -1;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        button {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    {% block body %}
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.tags %}
+                    <script>alert("{{ message }}");</script>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        <div class="login-container">
+            <div class="bodycontainer">
+                <h1>Login</h1>
+                <form method="post" action="{% url 'login_admin' %}">
+                    {% csrf_token %}
+
+                    <label for="username">username</label><br>
+                    <input type="text" id="username" name="adminusername" placeholder="Enter your username" required><br><br>
+
+                    <label for="password">Password</label><br>
+                    <input type="password" id="password" name="adminpassword" required><br><br>
+
+                    <button type="submit">SUBMIT</button>
+                </form>
+                if you don't have any account?<a href="http://127.0.0.1:8000/signup_admin/">sinup</a>
+            </div>
+        </div>
+    {% endblock %}
+</body>
+</html>

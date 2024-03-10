@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+{% extends 'Navbar.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+       /* Add your custom CSS styles here */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+h1, h2, h3 {
+    color: #333;
+}
+p {
+    color: #666;
+}
+.card,
+.form-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+    width: calc(100% - 20px); /* Adjusting for padding */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-container input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .form-container {
+        width: calc(100% - 40px); /* Adjusting for padding */
+    }
+}
+    </style>
+</head>
+{% block body %}
+    <div class="container">
+        <div class="card">
+            <h1>About Us</h1>
+            <p>Welcome to our health and nutrition website! We are dedicated to providing you with valuable information and resources to help you lead a healthy lifestyle.</p>
+        </div>
+
+        <div class="card">
+            <h2>Our Mission</h2>
+            <p>Our mission is to empower individuals to make informed choices about their health and nutrition by providing evidence-based information and practical tips.</p>
+        </div>
+
+        <div class="card">
+            <h2>Our Team</h2>
+            <p>We are a team of passionate health and nutrition professionals who are committed to promoting wellness and helping others achieve their health goals.</p>
+            <ul>
+                <li><strong>S venkata Hari Krishna Reddy</strong> - Registered Dietitian</li>
+                <li><strong>N Sai Venkata Komal</strong> - Certified Personal Trainer</li>
+                <li><strong>T Tagoor Gopi Nath</strong> - Medical Doctor</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, suggestions, or feedback, please feel free to contact us:</p>
+            <ul>
+                <li>Email: venkataharikrishnareddy@gmail.com</li>
+                <li>Phone:+91 7816044521</li>
+                <li>Address: 123 Health St, Nutrition City, India</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Connect With Us</h2>
+            <p>Follow us on social media to stay updated on the latest health and nutrition tips:</p>
+            <ul>
+                <li><a href="https://facebook.com">Facebook</a></li>
+                <li><a href="https://twitter.com">Twitter</a></li>
+                <li><a href="https://instagram.com">Instagram</a></li>
+            </ul>
+        </div>
+
+        <div class="form-container">
+            <h2>Contact Form</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name">
+                <input type="email" name="email" placeholder="Your Email">
+                <textarea name="message" placeholder="Your Message"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+{% endblock %}
+</html>

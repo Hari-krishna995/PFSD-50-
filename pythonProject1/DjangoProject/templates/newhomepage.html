@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Nutrition Hub</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}"> <!-- Link your CSS file here -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
+        }
+        footer ul {
+            padding: 0;
+            list-style: none;
+        }
+        footer ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+{% block body %}
+    <header>
+        <h1>Welcome to Health & Nutrition Hub</h1>
+        <p>Empowering You to Live Your Healthiest Life</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#nutrition">Nutrition</a></li>
+            <li><a href="#fitness">Fitness</a></li>
+            <li><a href="#wellness">Wellness</a></li>
+            <li><a href="#recipes">Recipes</a></li>
+        </ul>
+    </nav>
+
+    <section id="nutrition">
+        <h2>Nutrition</h2>
+        <p>Learn about balanced diets, superfoods, and healthy eating habits.</p>
+    </section>
+
+    <section id="fitness">
+        <h2>Fitness</h2>
+        <p>Discover workout routines, fitness tips, and ways to stay active.</p>
+    </section>
+
+    <section id="wellness">
+        <h2>Wellness</h2>
+        <p>Explore mental health, stress management, and holistic approaches to well-being.</p>
+    </section>
+
+    <section id="recipes">
+        <h2>Recipes</h2>
+        <p>Find delicious and nutritious recipes for every meal and dietary preference.</p>
+    </section>
+
+    <footer>
+        <p>Join our community to start your journey towards better health today!</p>
+        <ul>
+            <li><a href="newsletter.html">Subscribe to our newsletter</a></li>
+            <li><a href="social_media.html">Follow us on social media</a></li>
+            <li><a href="forums.html">Join our forums</a></li>
+        </ul>
+    </footer>
+{% endblock %}
+
+</html>

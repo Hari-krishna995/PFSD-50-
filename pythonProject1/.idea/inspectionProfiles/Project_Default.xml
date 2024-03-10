@@ -1,0 +1,15 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="main.calculateCost" />
+          <option value="main.currentSolution" />
+          <option value="main.generateNeighbors" />
+          <option value="main.generateInitialSolution" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

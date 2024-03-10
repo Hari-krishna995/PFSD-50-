@@ -1,0 +1,49 @@
+{% extends 'Navbar.html' %}
+{% load static %}
+<html lang="en">
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div  align="center" class="col">
+        <br>
+        <br>
+        <br><br>
+        <br>
+        <br>
+        <br><br>
+        <img src = "{% static 'vchv.jpg' %}" alt="My image" width="290" height="200"/>
+        <br> <br>
+      <h1 align="center">Welcome to  Health and Nutrition Management System</h1>
+
+    </div>
+      <div  align="center" class="col">
+        <h1>Top Nutrision Components</h1>
+          <br>
+          <br>
+          <div class="row">
+  <div class="col-sm-6">
+          <div class="card border-primary border-4" style="width: 19rem;" >
+  <img src="{% static 'nutrision.jpg' %}" class="card-img-top" alt="...">
+</div>
+  </div>
+          <br><br>
+              <br><br>
+               <div class="col-sm-6">
+          <div class="card border-primary border-4" style="width: 20rem;" >
+  <img src="{% static 'OIP.jpg' %}" class="card-img-top" alt="...">
+</div>
+               </div>
+      </div>
+  </div>
+</div>
+</div>
+
+<br><br><br>
+<center>
+    <div class="d-grid gap-2 col-6 mx-auto">
+<a type="button" class="btn btn-primary btn-lg" href="{% url 'loginas' %}">Login as</a>
+    </div>
+    </center>
+<br><br><br><br><br><br>
+{% endblock %}
+</html>
